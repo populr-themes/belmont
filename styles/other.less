@@ -21,13 +21,13 @@ hr {
 // Color is set by default to your primary brand color.
 ::-moz-selection {
     background-color: @color-primary;
-    color: white;
+    color: #fff;
     text-shadow: none;
 }
 
 ::selection {
     background-color: @color-primary;
-    color: white;
+    color: #fff;
     text-shadow: none;
 }
 
@@ -42,7 +42,7 @@ img::-moz-selection { background: transparent; }
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
-    color: @color-text;
+    #populr > .text-color-over-color(@background-color);
     padding: 0.2em 0;
 }
 
@@ -110,7 +110,7 @@ pre {
     line-height: @line-height-base;
     word-break: break-all;
     word-wrap: break-word;
-    color: @color-text;
+    #populr > .text-color-over-color(@background-color);
     background-color: @black-10;
     border: 1px solid @black-30;
     border-radius: 5px;
