@@ -1,0 +1,78 @@
+// Use this statement to import Google Web Fonts
+@import 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Montserrat:700';
+
+// Use @base-url when specifying relative paths to images, fonts, 
+// and other resources.
+@base-url: '..';
+
+// @background-color holds the default background color for 
+// your pop. You can specify it here, but Populr will override 
+// this value once the user selects a background image for their 
+// pop. Populr automatically calculates the average color of any 
+// background image selected by the user, and stores that average 
+// color in @background-color.
+@background-color: #fff;
+
+/************************************************************************
+// The following values can be edited by Populr's users via dropdown 
+// menus in the pop editor.
+*/
+
+// @headline-font-family is changed with the Font dropdown 
+@headline-font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@headline-font-weight: 700;
+@headline-font-size: 36px;
+
+// @custom-color is changed with the custom color picker in the Color 
+// dropdown. The color picker will only be available to your users if 
+// you set it up as one of your color palettes. See the Populr themer 
+// documentation for details on how this works:
+// http://developers.populr.me/theming/
+@custom-color: #428bca;
+
+/************************************************************************
+// @populr-theme version
+//
+// When @populr-theme-version is set to 0, the theme rendering engine
+// will use Populr's legacy grid. This is a fast way to get started, 
+// since the legacy grid provides good general-purpose settings. If you 
+// would like to define your own grid, set @populr-theme-version to 1.
+//
+// The value of @populr-theme-version impacts two other things: icons and
+// buttons, both of which can be added to text areas by the end user.
+// If @populr-theme-version is 0, Populr will automatically include 
+// mixins that will style icons and buttons attractively, based off the
+// @custom-color variable.
+// If @populr-theme-version is 1, you will have to manually add 
+// the corresponding mixins to use our styling, or you can style these
+// elements yourself.
+*/
+
+// 0 = Populr legacy grid, and use Populr's default icon & button styling
+// 1 = Define your own grid, style icons & buttons yourself
+@populr-theme-version: 1;
+
+// To use your own grid, edit the following properties as needed.
+.columnizer-row-inner {
+  margin: 0 auto;
+  max-width: 960px;
+}
+.columnizer-col {
+	float: left;
+	margin: 12px;
+
+	.columnizer-cols1 & { width: 960px;	}
+	.columnizer-cols2 & { width: 468px;	}
+	.columnizer-cols3 & { width: 302px; }
+	.columnizer-cols4 & { width: 220px; }
+
+	&:first-child { margin-left: 0; }
+	&:last-child { margin-right: 0; }
+}
+// clearfix for columnizer rows
+.columnizer-row:after { display: block; visibility: hidden; height: 0; clear: both; content: ' '; }
+.columnizer-row { *zoom: 1; }
+
+// If you've set @populr-theme-version to 1, we recommend using these mixins.
+#populr > .link-button(@theme-accent-color);
+#populr > .icon(@theme-accent-color);

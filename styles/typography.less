@@ -1,0 +1,197 @@
+// -------------------------------------------------------------------------
+// BASICS
+// -------------------------------------------------------------------------
+
+// Font Families
+@font-family-sans-serif:        "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:             Georgia, Times, serif;
+@font-family-monospace:         Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-base:              @font-family-sans-serif;
+@body-font-family:              @font-family-sans-serif;
+
+// Base Font Sizes/*
+@font-size-base:                112.5%; // percentage value (16 * 112.5% = 18px)
+@body-font-size:                18px;
+@font-size-large:               (@font-size-base * 1.25);
+@font-size-small:               (@font-size-base * 0.75);
+
+// Line Height
+@line-height-base:              30px;
+
+// Baseline
+@baseline:                      6px;
+
+// Bottom margin for paragraphs
+@p-margin-bottom:               24px;
+
+// The default is hyphenation: see _base.scss
+// http://meyerweb.com/eric/thoughts/2012/12/17/where-to-avoid-css-hyphenation
+abbr, acronym, blockquote, code, dir, kbd, listing, plaintext, q, samp, tt, var, xmp {
+  	-webkit-hyphens: none; // Safari 5.1 thru 6, iOS 4.2 thru 6
+  	-moz-hyphens: none; // Firefox 16 thru 20
+  	-ms-hyphens: none; // IE10
+  	-o-hyphens: none;
+  	hyphens: none;	 // W3C standard
+}
+
+#pop {
+    font-family: @body-font-family;
+    color: @color-text;
+
+    a {
+      color: @color-link;
+      &:active { color: lighten(@color-link, 20%); }
+    }
+}
+
+// -------------------------------------------------------------------------
+// HEADINGS
+// -------------------------------------------------------------------------
+
+// Title text defaults
+// @headline-font-family is defined in variables.less
+.headline-text() {
+    font-family: @headline-font-family;
+    font-size: @headline-font-size;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 30px !important;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+}
+
+.pop-title-text() {
+    display: inline-block;
+    font-family: @headline-font-family;
+    font-size: 22px;
+    font-weight: @headline-font-weight;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 30px !important;
+    text-rendering: optimizeLegibility;
+    margin-left: 24px;
+}
+
+// -------------------------------------------------------------------------
+// BODY TEXT
+// -------------------------------------------------------------------------
+
+.body-text() {
+  font-family: @body-font-family;
+  font-size: @body-font-size;
+  line-height: @line-height-base;
+}
+
+// bottom margin for paragraphs
+p {
+	margin: auto auto @p-margin-bottom;
+}
+
+// -------------------------------------------------------------------------
+// LINKS
+// -------------------------------------------------------------------------
+
+a {
+    text-decoration: none;
+    line-height: inherit;
+    outline: 0;
+    -webkit-transition: border-bottom ease-in-out .2s,color ease-in-out .2s;
+    -webkit-transition-property: border-bottom, color;
+    -webkit-transition-duration: 0.2s, 0.2s;
+    -webkit-transition-timing-function: ease-in-out, ease-in-out;
+    -webkit-transition-delay: initial, initial;
+    transition: border-bottom ease-in-out .2s,color ease-in-out .2s;
+    transition-property: border-bottom, color;
+    transition-duration: 0.2s, 0.2s;
+    transition-timing-function: ease-in-out, ease-in-out;
+    transition-delay: initial, initial;
+}
+
+p a, p a:visited { 
+    line-height: inherit; 
+}
+
+// -------------------------------------------------------------------------
+// LISTS
+// -------------------------------------------------------------------------
+
+// Unordered and Ordered lists
+// Take off bottom margin from nested lists
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: @p-margin-bottom;
+    padding-left: 30px;
+
+    ul,
+    ol {
+        margin-bottom: 0;
+    }
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0; // Undo browser default
+}
+
+// -------------------------------------------------------------------------
+// MISC
+// -------------------------------------------------------------------------
+
+em,
+i {
+    font-style: italic;
+    line-height: inherit; 
+}
+
+strong,
+b {
+    line-height: inherit; 
+}
+
+u {
+    border-bottom: 1px solid;
+}
+
+small, .small {
+    font-size: @font-size-small;
+    font-weight: normal;
+    line-height: 1;
+}
+
+// Remove underlines from potentially troublesome elements.
+u, ins {
+    text-decoration: none;
+}
+
+// Quotes
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+}
+
+blockquote {
+    max-width: 100%; // Prevents it from breaking out of container
+    margin: @p-margin-bottom 0;
+    padding-left: @p-margin-bottom;
+    border-left: 2px solid @theme-accent-color;
+}
+
+blockquote, q {
+    quotes: none;
+    font-size: (@body-font-size * 1.25);
+}
+
+// Undo browser default styling
+cite { 
+    font-style: normal; 
+}
+
+.pplr-icon {
+    font-size: 22px !important;
+}

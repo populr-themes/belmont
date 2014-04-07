@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html itemscope>
+    
+    <head>
+        <!-- Basics -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Belmont</title>
+
+        <!-- Dummy content parameters -->
+        <meta itemprop="dummyImageCategory" content="All">
+        <meta itemprop="dummyContentLength" content="long">
+
+        <!-- Themes -->
+        <meta itemprop="palette" content="palette-default" title="Blue & Red" data-preview="#464b5a,#E56153">
+        <meta itemprop="palette" content="palette-greygreen" title="Grey & Green" data-preview="#444,#48a541">
+        <meta itemprop="palette" content="palette-purpleturquoise" title="Purple & Turquoise" data-preview="#542437,#00ab8e">
+        <meta itemprop="palette" content="palette-blueyellow" title="Blue & Yellow" data-preview="#22677b,#eacb69">
+        <meta itemprop="palette" content="palette-custom" title="Custom" data-preview="custom">
+
+        <!-- Background container -->
+        <meta itemprop="backgroundContainer" content=".background-image-area">
+
+        <!-- Theme styles -->
+        <link rel="stylesheet/less" type="text/css" href="styles/main.less">
+
+        <!-- This script loads the Populr theming engine. Populr will automatically remove it at runtime. -->
+        <script src="http://populr.me/assets/developers/themer.js"></script>
+    </head>
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p>
+        <![endif]-->
+
+        <script id="theme" type="text/x-handlebars-template">
+
+        <div class="background-image-area">
+
+        <!-- Logo & Title -->
+        <div class="logo-container animated fadeInLeft">
+            <div id="pop-logo">{{logo max_height=100}}</div>
+            <p id="pop-title">{{{title}}}</p>
+        </div>
+
+        <!-- Body Region -->
+        {{#region "columnizer" id="body-region" max_cols="4" max_auto_assets="0" dummy_content="T-1|T-1,T-1,T-1,T-1|T-1,T-1,T-1|I-1|I-1,I-3|V-1,V-2|D-1,D-3|E-1|E-1,E-2"}}
+
+            <!-- Text Assets -->
+            {{#asset "text" size="1"}}
+                {{{title}}}
+                {{{body}}}
+                <div class="border-center"></div>
+            {{/asset}}
+
+            {{#asset "text" size="2"}}
+                {{{title}}}
+                {{{body}}}
+            {{/asset}}
+
+            {{#asset "text" size="3"}}
+                {{{title}}}
+                {{{body}}}
+            {{/asset}}
+
+            {{#asset "text" size="4"}}
+                {{{title}}}
+                {{{body}}}
+            {{/asset}}
+
+            <!-- Image Assets -->
+            {{#asset "imagegroup" size="1"}}
+                {{{imageslider images width="912" height="534"}}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "imagegroup" size="2"}}
+                {{{imageslider images width="420" height="252"}}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "imagegroup" size="3"}}
+                {{{imageslider images width="254" height="152"}}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "imagegroup" size="4"}}
+                {{{imageslider images width="172" height="103"}}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            <!-- Document Assets -->
+            {{#asset "documentgroup" size="1"}}
+                {{{title}}}
+                {{{description}}}
+                <ul class="documents">
+                    {{#documents}}
+                        <li class="doc-download"><a class="link-btn" href="{{{source_file_name}}}"><i class="icon icon-download-alt fa-2x" />  Download</a></li>
+                        <li class="download-info">{{{source_file_name}}}</li>
+                    {{/documents}}
+                </ul>
+            {{/asset}}
+
+            {{#asset "documentgroup" size="2"}}
+                {{{title}}}
+                {{{description}}}
+                <ul class="documents">
+                    {{#documents}}
+                        <li class="doc-download"><a class="link-btn" href="{{{source_file_name}}}"><i class="icon icon-download-alt fa-2x" />  Download</a></li>
+                        <li class="download-info">{{{source_file_name}}}</li>
+                    {{/documents}}
+                </ul>
+            {{/asset}}
+
+            {{#asset "documentgroup" size="3"}}
+                {{{title}}}
+                {{{description}}}
+                <ul class="documents">
+                    {{#documents}}
+                        <li class="doc-download"><a class="link-btn" href="{{{source_file_name}}}"><i class="icon icon-download-alt fa-2x" />  Download</a></li>
+                        <li class="download-info">{{{source_file_name}}}</li>
+                    {{/documents}}
+                </ul>
+            {{/asset}}
+
+            {{#asset "documentgroup" size="4"}}
+                {{{title}}}
+                {{{description}}}
+                <ul class="documents">
+                    {{#documents}}
+                        <li class="doc-download"><a class="link-btn" href="{{{source_file_name}}}"><i class="icon icon-download-alt fa-lg" />  Download</a></li>
+                        <li class="download-info">{{{source_file_name}}}</li>
+                    {{/documents}}
+                </ul>
+            {{/asset}}
+
+            <!-- Embed Assets -->
+            {{#asset "embedgroup" size="1" width="912"}}
+                {{#embeds}}
+                    <div class="embed">{{{html}}}</div>
+                {{/embeds}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "embedgroup" size="2" width="420"}}
+                {{#embeds}}
+                    <div class="embed">{{{html}}}</div>
+                {{/embeds}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "embedgroup" size="3" width="254"}}
+                {{#embeds}}
+                    <div class="embed">{{{html}}}</div>
+                {{/embeds}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "embedgroup" size="4" width="172"}}
+                {{#embeds}}
+                    <div class="embed">{{{html}}}</div>
+                {{/embeds}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+        {{/region}}
+
+        </div> <!-- End of background-image-area -->
+
+        <div class="footer-wrapper">
+
+        <!-- Footer Region -->
+        {{#region "columnizer" id="footer-region" max_cols="4" max_auto_assets="0" dummy_content="T-1"}}
+
+            <!-- Text Assets -->
+            {{#asset "text" size="1"}}
+                {{{title}}}
+                {{{body}}}
+                <div class="border-center"></div>
+            {{/asset}}
+
+            {{#asset "text" size="2"}}
+                {{{title}}}
+                {{{body}}}
+            {{/asset}}
+
+            {{#asset "text" size="3"}}
+                {{{title}}}
+                {{{body}}}
+            {{/asset}}
+
+            {{#asset "text" size="4"}}
+                {{{title}}}
+                {{{body}}}
+            {{/asset}}
+
+            <!-- Image Assets -->
+            {{#asset "imagegroup" size="1"}}
+                {{{imageslider images width="912" height="534"}}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "imagegroup" size="2"}}
+                {{{imageslider images width="420" height="252"}}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "imagegroup" size="3"}}
+                {{{imageslider images width="254" height="152"}}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "imagegroup" size="4"}}
+                {{{imageslider images width="172" height="103"}}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            <!-- Document Assets -->
+            {{#asset "documentgroup" size="1"}}
+                {{{title}}}
+                {{{description}}}
+                <ul class="documents">
+                    {{#documents}}
+                        <li class="doc-download"><a class="link-btn" href="{{{source_file_name}}}"><i class="icon icon-download-alt fa-lg" />  Download</a></li>
+                        <li class="download-info">{{{source_file_name}}}</li>
+                    {{/documents}}
+                </ul>
+            {{/asset}}
+
+            {{#asset "documentgroup" size="2"}}
+                {{{title}}}
+                {{{description}}}
+                <ul class="documents">
+                    {{#documents}}
+                        <li class="doc-download"><a class="link-btn" href="{{{source_file_name}}}"><i class="icon icon-download-alt fa-lg" />  Download</a></li>
+                        <li class="download-info">{{{source_file_name}}}</li>
+                    {{/documents}}
+                </ul>
+            {{/asset}}
+
+            {{#asset "documentgroup" size="3"}}
+                {{{title}}}
+                {{{description}}}
+                <ul class="documents">
+                    {{#documents}}
+                        <li class="doc-download"><a class="link-btn" href="{{{source_file_name}}}"><i class="icon icon-download-alt fa-lg" />  Download</a></li>
+                        <li class="download-info">{{{source_file_name}}}</li>
+                    {{/documents}}
+                </ul>
+            {{/asset}}
+
+            {{#asset "documentgroup" size="4"}}
+                {{{title}}}
+                {{{description}}}
+                <ul class="documents">
+                    {{#documents}}
+                        <li class="doc-download"><a class="link-btn" href="{{{source_file_name}}}"><i class="icon icon-download-alt fa-lg" />  Download</a></li>
+                        <li class="download-info">{{{source_file_name}}}</li>
+                    {{/documents}}
+                </ul>
+            {{/asset}}
+
+            <!-- Embed Assets -->
+            {{#asset "embedgroup" size="1" width="912"}}
+                {{#embeds}}
+                    <div class="embed">{{{html}}}</div>
+                {{/embeds}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "embedgroup" size="2" width="420"}}
+                {{#embeds}}
+                    <div class="embed">{{{html}}}</div>
+                {{/embeds}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "embedgroup" size="3" width="254"}}
+                {{#embeds}}
+                    <div class="embed">{{{html}}}</div>
+                {{/embeds}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+            {{#asset "embedgroup" size="4" width="172"}}
+                {{#embeds}}
+                    <div class="embed">{{{html}}}</div>
+                {{/embeds}}
+                {{{title}}}
+                {{{description}}}
+            {{/asset}}
+
+        {{/region}}
+
+        <div class="footer-social-boat">
+            {{sharing}}
+            <br>
+            {{pop_links}}
+        </div>
+
+        </div>
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,128 @@
+// -------------------------------------------------------------------------
+// HR
+// -------------------------------------------------------------------------
+
+// A better looking default horizontal rule
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2em 0;
+    padding: 0;
+}
+
+// -------------------------------------------------------------------------
+// SELECTION
+// -------------------------------------------------------------------------
+
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection rule sets have to be separate.
+// Color is set by default to your primary brand color.
+::-moz-selection {
+    background-color: @color-primary;
+    color: white;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: @color-primary;
+    color: white;
+    text-shadow: none;
+}
+
+img::selection { background: transparent; }
+img::-moz-selection { background: transparent; }
+
+// -------------------------------------------------------------------------
+// MISC
+// -------------------------------------------------------------------------
+
+// For Browsehappy prompt
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: @color-text;
+    padding: 0.2em 0;
+}
+
+// -------------------------------------------------------------------------
+// TABLES
+// -------------------------------------------------------------------------
+
+table {
+    width: 100%;
+    max-width: 100%;
+    display: table;
+    max-width: 100%; // Prevents it from breaking out of container
+    // Cells
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                padding: 8px;
+                line-height: @line-height-base;
+                vertical-align: top;
+                border-top: 1px solid @black-30;
+            }
+        }
+    }
+    > thead > tr {
+        > th,
+        > td {
+        border-top: none;
+            border-bottom-width: 2px;
+        }
+    }
+}
+
+th {
+    text-align: left;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: @font-family-monospace;
+}
+
+// Inline code
+code {
+    padding: 2px 4px;
+    max-width: 100%;
+    font-size: 90%;
+    color: inherit;
+    background-color: transparent;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+
+// Blocks of code
+pre {
+    display: block;
+    padding: 20px;
+    margin: 2.5em 0;
+    max-width: 100%;
+    font-size: (@body-font-size * .75);
+    line-height: @line-height-base;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: @color-text;
+    background-color: @black-10;
+    border: 1px solid @black-30;
+    border-radius: 5px;
+    // Account for some code outputs that place code tags in pre tags
+    code {
+        padding: 0;
+        font-size: inherit;
+        color: inherit;
+        word-wrap: normal;
+        white-space: -moz-pre-wrap;
+        white-space: pre-wrap; // http://css-tricks.com/almanac/properties/w/whitespace
+        background-color: transparent;
+        border-radius: 0;
+    }
+}

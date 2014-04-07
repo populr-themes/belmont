@@ -1,0 +1,38 @@
+// -------------------------------------------------------------------------
+// MOBILE
+// -------------------------------------------------------------------------
+
+// The Populr mobile reset will handle some of the basics of mobilizing 
+// your theme, such as stacking all of the assets vertically and scaling 
+// them to 100% of the width of their container. However, you'll have to 
+// fine tune the styling to make your theme look really good on mobile
+// devices.
+
+@media screen and (max-width: 960px) {
+  #populr > .mobile-reset();
+
+  // Edit the grid for mobile
+  .columnizer-row-inner, #pop-title { max-width: 640px; }
+  .columnizer-col { margin: 0 12px 24px !important; }
+
+  // Edit the typography for mobile
+  #pop-title { font-size: 20px !important; }
+  .asset-title { font-size: 24px !important; }
+  .description, .body, .description li, .body li { 
+    font-size: 14px !important; 
+    line-height: 1.65;
+    margin: 0 !important;
+  }
+  p, ol, ul { margin: auto auto 15px; }
+  .asset-title, .description, .body, .description li, .body li { text-align: left !important; }
+}
+
+@media screen and (max-width: 600px) {
+  #pop-title { font-size: 27px !important; }
+  .asset-title { font-size: 20px !important; }
+  .logo-container { text-align: center; }
+  #pop-logo {
+      display: block;
+      margin: 0 auto 40px auto;
+  }
+}
