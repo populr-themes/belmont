@@ -23,9 +23,15 @@ body {
     margin-bottom: 0 !important;
     vertical-align: top;
     text-transform: uppercase;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
+    width: 960px;
 }
 
+.logo-container {
+    #pop-logo + #pop-title {
+        width: 760px;
+    }
+}
 .logo-container {
     width: 90%;
     max-width: 1400px;
@@ -108,7 +114,7 @@ body {
     color: @color-text !important;
 
     .columnizer-row-inner {
-        border-bottom: 2px solid @black-20;
+        border-bottom: 2px solid @black-10;
     }
 
     a {
@@ -137,7 +143,7 @@ body {
 
 #footer-region {
     .columnizer-row-inner {
-        border-bottom: 2px solid rgba(255,255,255,0.5);
+        border-bottom: 2px solid rgba(255,255,255,0.2);
     }
 
     a {
@@ -207,6 +213,11 @@ body {
     }
     .description, .body, .description li, .body li,  {
         font-size: @body-font-size;
+    }
+}
+.asset-type-text.asset-size-3 {
+    .asset-title {
+        font-size: 1.5rem;;
         text-align: left;
     }
 }
