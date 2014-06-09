@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html itemscope>
-    
+
     <head>
         <!-- Basics -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <title>Belmont</title>
 
         <!-- Google Fonts -->
@@ -31,6 +31,7 @@
 
         <!-- This script loads the Populr theming engine. Populr will automatically remove it at runtime. -->
         <script src="http://populr.me/assets/developers/themer.js"></script>
+
     </head>
 
     <body>
@@ -40,12 +41,13 @@
 
         <script id="theme" type="text/x-handlebars-template">
 
-        
 
-        <!-- Logo & Title -->
-        <div class="logo-container animated fadeInLeft">
-            {{logo max_height=120}}
-            {{{title}}}
+        <div class="background-image-area">
+            <!-- Logo & Title -->
+            <div class="logo-container animated fadeInLeft">
+                {{logo max_height=120}}
+                {{{title}}}
+            </div>
         </div>
 
 
@@ -179,7 +181,7 @@
 
         {{/region}}
 
-        <div class="footer-wrapper background-image-area">
+        <div class="footer-wrapper">
 
         <!-- Footer Region -->
         {{#region "columnizer" id="footer-region" max_cols="4" max_auto_assets="0" dummy_content="T-1"}}
