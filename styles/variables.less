@@ -56,7 +56,6 @@
 .columnizer-row-inner {
   margin: 0 auto;
   max-width: 960px;
-  .lt-ie9 & { max-width: none; }
 }
 .columnizer-col {
 	float: left;
@@ -77,3 +76,12 @@
 // If you've set @populr-theme-version to 1, we recommend using these mixins.
 #populr > .link-button(@theme-accent-color);
 #populr > .icon(@theme-accent-color);
+
+
+// IE 7, 8 Adjustments
+.lt-ie9 .columnizer-row-inner {
+  width: 960px;
+  max-width: none;
+
+  .columnizer-cols4 & { width: 22%; }
+}
