@@ -55,7 +55,8 @@
 // To use your own grid, edit the following properties as needed.
 .columnizer-row-inner {
   margin: 0 auto;
-  .gt-ie8 & { max-width: 960px; }
+  max-width: 960px;
+  .lt-ie9 & { max-width: 0; }
 }
 .columnizer-col {
 	float: left;
